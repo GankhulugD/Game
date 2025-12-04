@@ -1,0 +1,317 @@
+@import url("https://fonts.googleapis.com/css2?family=Seymour+One&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Shrikhand&display=swap");
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+/* body {
+  max-width: 1920px;
+} */
+.main-wrapper {
+  max-width: 1920px;
+  margin: 0 auto;
+  /* width: 90%; */
+}
+.body {
+  width: 1920px;
+  height: 1080px;
+  background-color: #9dcaff;
+  background-size: contain;
+
+  margin: auto;
+}
+.overflow {
+  height: 100%;
+  width: 100%;
+  overflow: clip;
+  position: relative;
+}
+.point {
+  margin: 0 auto;
+  padding-top: 97px;
+  z-index: -1;
+  display: flex;
+  justify-content: center;
+  text-align: center;
+  gap: 256px;
+  max-width: fit-content;
+}
+.p-ai {
+  font-family: "Seymour One", sans-serif;
+  font-weight: 400;
+  font-size: 160px;
+  color: #ffffff;
+  text-align: center;
+  text-shadow: 4px -7px 0px #c2c2c2, 4px 4px 0px #000000;
+  -webkit-text-stroke-width: 2px;
+  -webkit-text-stroke-color: #000000;
+  z-index: 2;
+}
+.p-ai:hover {
+  animation-name: bounce2;
+  animation-duration: 0.6s;
+  animation-timing-function: ease-in-out;
+  animation-iteration-count: 1;
+}
+.p-human {
+  font-family: "Seymour One", sans-serif;
+  font-weight: 400;
+  font-size: 160px;
+  color: #ffffff;
+  text-align: center;
+  text-shadow: 4px -7px 0px #c2c2c2, 4px 4px 0px #000000;
+  -webkit-text-stroke-width: 2px;
+  -webkit-text-stroke-color: #000000;
+  z-index: 2;
+}
+.p-human:hover {
+  animation-name: bounce2;
+  animation-duration: 0.6s;
+  animation-timing-function: ease-in-out;
+  animation-iteration-count: 1;
+}
+.ai {
+  /* width: 772px;
+  height: 1643;
+  background-image: url(./images/animation2=0\_choice=1.png); */
+  position: absolute;
+  rotate: 50deg;
+  opacity: 1;
+  right: 1350px;
+  overflow: hidden;
+}
+.human {
+  transform: scaleX(-1);
+  position: absolute;
+  rotate: -50deg;
+  opacity: 1;
+  left: 1350px;
+  overflow: hidden;
+}
+.aiAndYou {
+  margin: 0 auto;
+  padding-top: 0px;
+  z-index: -1;
+  display: flex;
+  justify-content: center;
+  text-align: center;
+  gap: 303px;
+  max-width: fit-content;
+}
+.pp-ai {
+  padding-left: 36px;
+  font-family: "Seymour One", sans-serif;
+  font-weight: 400;
+  font-size: 48px;
+  color: #ffffff;
+  text-align: center;
+  text-shadow: 4px -7px 0px #c2c2c2, 4px 4px 0px #000000;
+  -webkit-text-stroke-width: 2px;
+  -webkit-text-stroke-color: #000000;
+  z-index: 2;
+}
+.pp-ai:hover {
+  animation-name: bounce2;
+  animation-duration: 0.6s;
+  animation-timing-function: ease-in-out;
+  animation-iteration-count: 1;
+}
+.pp-you {
+  font-family: "Seymour One", sans-serif;
+  font-weight: 400;
+  font-size: 48px;
+  color: #ffffff;
+  text-align: center;
+  text-shadow: 4px -7px 0px #c2c2c2, 4px 4px 0px #000000;
+  -webkit-text-stroke-width: 2px;
+  -webkit-text-stroke-color: #000000;
+  z-index: 2;
+}
+.pp-you:hover {
+  animation-name: bounce2;
+  animation-duration: 0.6s;
+  animation-timing-function: ease-in-out;
+  animation-iteration-count: 1;
+}
+.result {
+  margin: 0 auto;
+  padding-top: 399px;
+  z-index: -1;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  text-align: center;
+  gap: 36px;
+  max-width: fit-content;
+  /* display: none; */
+}
+.result1 {
+  font-family: "Seymour One", sans-serif;
+  font-weight: 400;
+  font-size: 96px;
+  /* letter-spacing: -30%; */
+  color: #ffffff;
+  text-align: center;
+  text-shadow: 4px -7px 0px #c2c2c2, 4px 4px 0px #000000;
+  -webkit-text-stroke-width: 2px;
+  -webkit-text-stroke-color: #000000;
+}
+.result1:hover {
+  animation-name: bounce2;
+  animation-duration: 0.6s;
+  animation-timing-function: ease-in-out;
+  animation-iteration-count: 1;
+}
+.next {
+  font-family: "Shrikhand";
+  font-weight: 400;
+  font-style: italic;
+  font-size: 32px;
+  letter-spacing: -10%;
+  color: black;
+  padding: 8px;
+  text-align: center;
+  box-shadow: -4px 7px 0px #c2c2c2, 4px 4px 0px #000000;
+  -webkit-text-stroke-width: 2px;
+  -webkit-text-stroke-color: #000000;
+}
+.restart {
+  margin-left: 24px;
+  font-family: "Shrikhand";
+  font-weight: 400;
+  font-style: italic;
+  font-size: 32px;
+  letter-spacing: -10%;
+  color: black;
+  padding: 8px;
+  text-align: center;
+  box-shadow: -4px 7px 0px #c2c2c2, 4px 4px 0px #000000;
+  -webkit-text-stroke-width: 2px;
+  -webkit-text-stroke-color: #000000;
+  animation-name: myAnimation;
+  animation-duration: 0.8s;
+  transition: 0.2s ease-out;
+}
+
+.restart1,
+.restart,
+.next1,
+.next {
+  transform: translateY(0); /* Анхдагч байрлал */
+  transition: transform 0.5s ease-out; /* Зөвхөн холдуулах үед удаан буцна */
+  transform-origin: left center;
+}
+
+/* Hover-ууд: Animation-ийг дуудаж, сүүлийн төлөвийг хадгална */
+.restart1:hover,
+.next1:hover {
+  animation-name: bounce;
+  animation-duration: 0.2s;
+  animation-timing-function: ease-in-out;
+  animation-iteration-count: 1;
+  animation-fill-mode: forwards; /* 💡 Энэ нь 100% төлөвөөр үлдээнэ! */
+
+  /* Hover хийх үед transition-г хурдан болгох (шууд өөрчлөлтөд нөлөөлөхгүй) */
+  transition-duration: 0.1s;
+}
+
+.restart:hover,
+.next:hover {
+  animation-name: bounce1;
+  animation-duration: 0.3s;
+  animation-timing-function: ease-in-out;
+  animation-iteration-count: 1;
+  animation-fill-mode: forwards; /* 💡 Сүүлийн төлөвийг хадгалах */
+
+  transition-duration: 0.1s;
+}
+
+.flex {
+  display: flex;
+  justify-content: center;
+}
+.idle1 {
+  height: 222px;
+  width: 222px;
+  background-image: url(./images/state=Idle-1.png);
+}
+.idle1:hover {
+  background-image: none;
+}
+.idle2 {
+  background-image: url(./images/state=Idle-2.png);
+}
+.idle3 {
+  background-image: url(./images/state=Idle.png);
+}
+
+.choices {
+  width: fit-content;
+  margin: 0 auto;
+  display: flex;
+  gap: 20px;
+
+  button {
+    border: none;
+    width: 100px;
+    height: 100px;
+    font-size: 50px;
+    border-radius: 10px;
+    cursor: pointer;
+  }
+}
+
+/* Animation-ийн сүүлийн төлөв нь 100%-д тогтоно */
+@keyframes bounce {
+  0% {
+    transform: rotate(-3deg);
+  }
+  40% {
+    transform: rotate(-4deg);
+  }
+  80% {
+    transform: rotate(-2deg);
+  }
+  100% {
+    transform: rotate(-3deg);
+  }
+}
+
+@keyframes bounce1 {
+  0% {
+    box-shadow: -5px 6px 0px #c2c2c2, 6px 6px 0px #000000;
+  }
+  40% {
+    box-shadow: -5px 6px 0px #c2c2c2, 6px 6px 0px #000000;
+  }
+  80% {
+    box-shadow: -5px 6px 0px #c2c2c2, 6px 6px 0px #000000;
+  }
+  100% {
+    box-shadow: -5px 6px 0px #c2c2c2, 6px 6px 0px #000000;
+  }
+}
+/* @keyframes bounce {
+  40% {
+    transform: rotate(-10deg);
+ 
+  }
+}
+@keyframes bounce1 {
+  40% {
+   
+    box-shadow: -5px 6px 0px #c2c2c2, 6px 6px 0px #000000;
+  }
+}*/
+@keyframes bounce2 {
+  20% {
+    text-shadow: -4.5px 6.5px 0px #c2c2c2, 5.5px 5.5px 0px #000000;
+  }
+  40% {
+    text-shadow: -5px 6px 0px #c2c2c2, 6px 6px 0px #000000;
+  }
+  80% {
+    text-shadow: -4.5px 6.5px 0px #c2c2c2, 5.5px 5.5px 0px #000000;
+  }
+}
