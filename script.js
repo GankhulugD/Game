@@ -206,6 +206,7 @@ let turn = (choice) => {
     setTimeout(function () {
       result.style.display = "block";
     }, 1410);
+    result1.innerHTML = "IT'S A DRAW";
     console.log("Тэнцлээ!");
   } else if (
     (choice === "rock" && computerChoice === "scissors") ||
