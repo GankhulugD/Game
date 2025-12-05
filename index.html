@@ -10,46 +10,65 @@
   <body>
     <div class="main-wrapper">
       <!-- <h1 class="h1">Rock-scissors-paper</h1> -->
-      <div class="body">
+      <div id="body" class="body">
         <div class="overflow">
           <div>
-            <div class="ai">
-              <img src="./images/animation2=0,_choice=1.png" alt="ai" />
-            </div>
             <div class="human">
-              <img src="./images/animation=0,_choice=1.png" alt="human" />
+              <img
+                id="choice_human"
+                src="./images/animation=0, choice=1.png"
+                alt="human"
+              />
+            </div>
+            <div class="ai">
+              <img
+                id="choice_ai"
+                src="./images/animation2=0, choice=1.png"
+                alt="ai"
+              />
             </div>
           </div>
           <div class="point">
-            <p class="p-ai">0</p>
-            <p class="p-human">0</p>
+            <p id="AI" class="p-ai">0</p>
+            <p id="HUMAN" class="p-human">0</p>
           </div>
           <div class="aiAndYou">
             <p class="pp-ai">AI</p>
             <p class="pp-you">YOU</p>
           </div>
           <div id="result" class="result">
-            <p class="result1">IT'S A DRAW</p>
+            <p id="result1" class="result1">IT'S A DRAW</p>
             <div>
-              <button class="next"><p class="next1">Next Round</p></button>
-              <button class="restart">
+              <button id="next" onclick="urDun('next')" class="next">
+                <p class="next1">Next Round</p>
+              </button>
+              <button id="restart" onclick="urDun('restart')" class="restart">
                 <p class="restart1">Restart</p>
               </button>
             </div>
           </div>
-          <div class="flex">
-            <p class="idle1"></p>
-            <div class="idle2"></div>
-            <div class="idle3"></div>
+          <div id="flex" class="flex">
+            <div id="rock" onclick="turn('rock')" class="idle1">
+              <div class="idle1-1"></div>
+            </div>
+            <div id="scissors" onclick="turn('scissors')" class="idle2">
+              <div class="idle2-2"></div>
+            </div>
+            <div id="paper" onclick="turn('paper')" class="idle3">
+              <div class="idle3-3"></div>
+            </div>
           </div>
         </div>
       </div>
       <!-- <div class="choices">
-      <button id="rock" onclick="turn('rock')">🪨</button>
-      <button id="scissors" onclick="turn('scissors')">✂️</button>
-      <button id="paper" onclick="turn('paper')"><img src="" alt="" /></button>
-    </div> -->
+        <button id="rock" onclick="turn('rock')">🪨</button>
+        <button id="scissors" onclick="turn('scissors')">✂️</button>
+        <button id="paper" onclick="turn('paper')">
+          <img src="" alt="" />
+        </button>
+      </div> -->
     </div>
+
     <script src="./script.js"></script>
   </body>
 </html>

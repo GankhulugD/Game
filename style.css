@@ -21,6 +21,20 @@
 
   margin: auto;
 }
+.body3 {
+  width: 1920px;
+  height: 1080px;
+  background-color: #ff9de9;
+  background-size: contain;
+  margin: auto;
+}
+.body2 {
+  width: 1920px;
+  height: 1080px;
+  background-color: #a4ee98;
+  background-size: contain;
+  margin: auto;
+}
 .overflow {
   height: 100%;
   width: 100%;
@@ -136,7 +150,7 @@
 }
 .result {
   margin: 0 auto;
-  padding-top: 399px;
+  padding-top: 450px;
   z-index: -1;
   display: flex;
   flex-direction: column;
@@ -144,7 +158,7 @@
   text-align: center;
   gap: 36px;
   max-width: fit-content;
-  /* display: none; */
+  display: none;
 }
 .result1 {
   font-family: "Seymour One", sans-serif;
@@ -200,7 +214,7 @@
 .next {
   transform: translateY(0); /* Анхдагч байрлал */
   transition: transform 0.5s ease-out; /* Зөвхөн холдуулах үед удаан буцна */
-  transform-origin: left center;
+  transform-origin: left bottom;
 }
 
 /* Hover-ууд: Animation-ийг дуудаж, сүүлийн төлөвийг хадгална */
@@ -216,6 +230,7 @@
   transition-duration: 0.1s;
 }
 
+.idle1-1:hover,
 .restart:hover,
 .next:hover {
   animation-name: bounce1;
@@ -226,24 +241,128 @@
 
   transition-duration: 0.1s;
 }
+.idle1:hover,
+.idle2:hover,
+.idle3:hover {
+  animation-name: bounce4;
+  animation-duration: 0.3s;
+  animation-timing-function: ease-in-out;
+  animation-iteration-count: 1;
+  animation-fill-mode: forwards; /* 💡 Сүүлийн төлөвийг хадгалах */
 
+  transition-duration: 0.1s;
+}
 .flex {
   display: flex;
   justify-content: center;
+  gap: 55px;
+  margin-top: 450px;
+  /* position: absolute;
+  bottom: 62px; */
+  /* display: none; */
 }
 .idle1 {
-  height: 222px;
-  width: 222px;
-  background-image: url(./images/state=Idle-1.png);
+  /* position: absolute;
+  bottom: 62px; */
+  height: 200px;
+  width: 200px;
+  /* position: relative; */
+  /* background-image: url(./images/state=Idle-1.png); */
+  z-index: 2;
+  background-color: white;
+  border-radius: 100px;
+  box-shadow: -4px 7px 0px #c2c2c2, 4px 4px 0px #000000;
+  -webkit-text-stroke-width: 2px;
+  -webkit-text-stroke-color: #000000;
+  display: flex;
+  justify-content: center;
+  align-items: start -5px;
+  padding-bottom: 20px;
 }
-.idle1:hover {
-  background-image: none;
+.idle1-1 {
+  width: 180px;
+  height: 190px;
+  background-image: url("./images/77f005709dc86d8ddb19a00f4d289a8b82e4f77e.png");
+  background-size: contain;
+  z-index: 3;
 }
+.idle1-1:hover {
+  animation-name: bounce3;
+  animation-duration: 0.3s;
+  animation-timing-function: ease-in-out;
+  animation-iteration-count: 1;
+  animation-fill-mode: forwards;
+
+  transition-duration: 0.1s;
+}
+
 .idle2 {
-  background-image: url(./images/state=Idle-2.png);
+  /* position: absolute;
+  bottom: 62px; */
+  height: 200px;
+  width: 200px;
+  /* position: relative; */
+  /* background-image: url(./images/state=Idle-1.png); */
+  z-index: 2;
+  background-color: white;
+  border-radius: 100px;
+  box-shadow: -4px 7px 0px #c2c2c2, 4px 4px 0px #000000;
+  -webkit-text-stroke-width: 2px;
+  -webkit-text-stroke-color: #000000;
+  display: flex;
+  justify-content: center;
+  align-items: start -5px;
+  padding-bottom: 20px;
+}
+.idle2-2 {
+  width: 180px;
+  height: 190px;
+  background-image: url(./images/fefb4bb81f88419c29830c6cac28b32a811970f9.png);
+  background-size: contain;
+  z-index: 3;
+}
+.idle2-2:hover {
+  animation-name: bounce3;
+  animation-duration: 0.3s;
+  animation-timing-function: ease-in-out;
+  animation-iteration-count: 1;
+  animation-fill-mode: forwards;
+
+  transition-duration: 0.1s;
 }
 .idle3 {
-  background-image: url(./images/state=Idle.png);
+  /* position: absolute;
+  bottom: 62px; */
+  height: 200px;
+  width: 200px;
+  /* position: relative; */
+  /* background-image: url(./images/state=Idle-1.png); */
+  z-index: 2;
+  background-color: white;
+  border-radius: 100px;
+  box-shadow: -4px 7px 0px #c2c2c2, 4px 4px 0px #000000;
+  -webkit-text-stroke-width: 2px;
+  -webkit-text-stroke-color: #000000;
+  display: flex;
+  justify-content: center;
+  align-items: start -5px;
+  padding-bottom: 20px;
+}
+.idle3-3 {
+  width: 180px;
+  height: 190px;
+  background-image: url(./images/9b508ef513606d87e873a46e34c15bcdc18399d2.png);
+  background-size: contain;
+  z-index: 3;
+}
+.idle3-3:hover {
+  animation-name: bounce3;
+  animation-duration: 0.3s;
+  animation-timing-function: ease-in-out;
+  animation-iteration-count: 1;
+  animation-fill-mode: forwards;
+
+  transition-duration: 0.1s;
 }
 
 .choices {
@@ -313,5 +432,37 @@
   }
   80% {
     text-shadow: -4.5px 6.5px 0px #c2c2c2, 5.5px 5.5px 0px #000000;
+  }
+}
+@keyframes bounce3 {
+  0% {
+    transform: rotate(-10deg);
+    scale: 1.1;
+  }
+  40% {
+    transform: rotate(-11deg);
+    scale: 1.1;
+  }
+  80% {
+    transform: rotate(-9deg);
+    scale: 1.1;
+  }
+  100% {
+    transform: rotate(-10deg);
+    scale: 1.1;
+  }
+}
+@keyframes bounce4 {
+  0% {
+    box-shadow: -7px 8px 0px #c2c2c2, 8px 8px 0px #000000;
+  }
+  40% {
+    box-shadow: -7px 8px 0px #c2c2c2, 8px 8px 0px #000000;
+  }
+  80% {
+    box-shadow: -7px 8px 0px #c2c2c2, 8px 8px 0px #000000;
+  }
+  100% {
+    box-shadow: -7px 8px 0px #c2c2c2, 8px 8px 0px #000000;
   }
 }
